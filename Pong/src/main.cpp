@@ -1,23 +1,33 @@
 #include <iostream>
 #include <BioEngine.h>
 
+void printMatrix(bioengine::Matrix3 mat)
+{
+	for (size_t i = 0; i < 3; i++)
+	{
+		std::cout << mat[0 + i * 3] << ", ";
+		std::cout << mat[1 + i * 3] << ", ";
+		std::cout << mat[2 + i * 3] << std::endl;
+	}
+	std::cout << "\n" << std::endl;
+}
+
 int main()
 {
-	std::cout << "Hello World" << std::endl;
-	bioengine::Hello::SayHello();
+	bioengine::Matrix3 mat;
+	printMatrix(mat);
 
-	bioengine::Vector2 vec0;
-	bioengine::Vector2 vec1 = bioengine::Vector2(7.0f, 5.3f);
-	vec0 += vec1;
+	bioengine::Matrix3 identity = bioengine::Matrix3::Identity();
+	printMatrix(identity);
 
-	std::cout << vec0.x << "," << vec0.y << std::endl;
-	std::cout << vec1.x << "," << vec1.y << std::endl;
-	std::cout << "\n" << std::endl;
+	bioengine::Matrix3 translate = bioengine::Matrix3::Translate(bioengine::Vector2(2, 5));
+	printMatrix(translate);
 
-	bioengine::Vector4 vec4_0;
-	bioengine::Vector4 vec4_1 = bioengine::Vector4(1.0f, 1.0f, 0.0f, 1.0f);
-	std::cout << vec4_0.r << "," << vec4_0.g << "," << vec4_0.b << "," << vec4_0.a << std::endl;
-	std::cout << vec4_1.r << "," << vec4_1.g << "," << vec4_1.b << "," << vec4_1.a << std::endl;
+	identity *= translate;
+	printMatrix(identity);
+
+	identity *= mat;
+	printMatrix(identity);
 
 	system("pause");
 	return 0;
