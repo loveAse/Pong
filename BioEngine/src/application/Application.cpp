@@ -2,14 +2,22 @@
 
 namespace bioengine {
 
-	Application::Application() { }
-	Application::~Application() { }
+	Application::Application() 
+	{ 
+		m_Window = new graphics::Window("BioEngine App", 800, 600);
+	}
+	Application::~Application() 
+	{ 
+		delete m_Window;
+	}
 	void Application::Render() { }
 	void Application::Run()
 	{
-		while (true)
+		while (m_Window->IsOpen())
 		{
+			m_Window->Clear();
 			Render();
+			m_Window->Update();
 		}
 	}
 

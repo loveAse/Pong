@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BioEngine/API.h"
+#include "BioEngine/graphics/Window.h"
 
 namespace bioengine {
 
@@ -12,6 +13,9 @@ namespace bioengine {
 
 		void Run();
 		virtual void Render();
+
+	private:
+		graphics::Window* m_Window;
 	};
 
 }
