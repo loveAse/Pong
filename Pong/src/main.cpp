@@ -1,34 +1,30 @@
-#include <iostream>
 #include <BioEngine.h>
+#include <iostream>
 
-void printMatrix(bioengine::Matrix3 mat)
+class PongGame : public bioengine::Application
 {
-	for (size_t i = 0; i < 3; i++)
+public:
+	PongGame()
 	{
-		std::cout << mat[0 + i * 3] << ", ";
-		std::cout << mat[1 + i * 3] << ", ";
-		std::cout << mat[2 + i * 3] << std::endl;
+
 	}
-	std::cout << "\n" << std::endl;
-}
+	~PongGame()
+	{
+
+	}
+
+	void Render() override
+	{
+		std::cout << "Render" << std::endl;
+	}
+};
 
 int main()
 {
-	bioengine::Matrix3 mat;
-	printMatrix(mat);
+	PongGame* game = new PongGame();
+	game->Run();
 
-	bioengine::Matrix3 identity = bioengine::Matrix3::Identity();
-	printMatrix(identity);
-
-	bioengine::Matrix3 translate = bioengine::Matrix3::Translate(bioengine::Vector2(2, 5));
-	printMatrix(translate);
-
-	identity *= translate;
-	printMatrix(identity);
-
-	identity *= mat;
-	printMatrix(identity);
-
-	system("pause");
+	delete game;
+	
 	return 0;
 }
