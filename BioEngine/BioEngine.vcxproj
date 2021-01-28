@@ -174,7 +174,9 @@
     <ClInclude Include="include\BioEngine.h" />
     <ClInclude Include="include\BioEngine\API.h" />
     <ClInclude Include="include\BioEngine\application\Application.h" />
+    <ClInclude Include="include\BioEngine\graphics\Buffer.h" />
     <ClInclude Include="include\BioEngine\graphics\ShaderProgram.h" />
+    <ClInclude Include="include\BioEngine\graphics\VertexTypes.h" />
     <ClInclude Include="include\BioEngine\graphics\Window.h" />
     <ClInclude Include="include\BioEngine\Hello.h" />
     <ClInclude Include="include\BioEngine\math\Matrix3.h" />
@@ -184,11 +186,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\application\Application.cpp" />
+    <ClCompile Include="src\graphics\Buffer.cpp" />
+    <ClCompile Include="src\graphics\ShaderProgram.cpp" />
+    <ClCompile Include="src\graphics\VertexTypes.cpp" />
     <ClCompile Include="src\graphics\Window.cpp" />
     <ClCompile Include="src\Hello.cpp" />
     <ClCompile Include="src\math\Matrix3.cpp" />
     <ClCompile Include="src\math\Vector2.cpp" />
     <ClCompile Include="src\math\Vector4.cpp" />
+    <ClCompile Include="src\utils\FileUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
