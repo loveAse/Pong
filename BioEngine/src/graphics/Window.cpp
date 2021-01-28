@@ -32,6 +32,12 @@ namespace bioengine { namespace graphics {
 		}
 
 		glfwMakeContextCurrent(m_Window);
+
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		{
+			throw "Failed to Load GL";
+			return false;
+		}
 	}
 
 	void Window::Clear()

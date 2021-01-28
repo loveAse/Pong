@@ -39,6 +39,12 @@
     <ClInclude Include="include\BioEngine\graphics\Window.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
+    <ClInclude Include="include\BioEngine\graphics\ShaderProgram.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BioEngine\utils\FileUtils.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hello.cpp">

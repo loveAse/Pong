@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BioEngine/API.h"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 namespace bioengine { namespace graphics {
