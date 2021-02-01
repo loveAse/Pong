@@ -18,9 +18,6 @@
     <ClInclude Include="include\BioEngine\API.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="include\BioEngine\Hello.h">
-      <Filter>Üst Bilgi Dosyaları</Filter>
-    </ClInclude>
     <ClInclude Include="include\BioEngine.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
@@ -51,11 +48,11 @@
     <ClInclude Include="include\BioEngine\graphics\VertexTypes.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
+    <ClInclude Include="include\BioEngine\graphics\Rectangle.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Hello.cpp">
-      <Filter>Kaynak Dosyalar</Filter>
-    </ClCompile>
     <ClCompile Include="src\math\Vector2.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
@@ -81,6 +78,9 @@
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
     <ClCompile Include="src\graphics\Buffer.cpp">
+      <Filter>Kaynak Dosyalar</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\Rectangle.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
   </ItemGroup>
