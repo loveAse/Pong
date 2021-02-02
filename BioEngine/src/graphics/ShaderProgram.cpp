@@ -93,4 +93,19 @@ namespace bioengine { namespace graphics {
 		glUseProgram(m_ProgramId);
 	}
 
+	// Uniforms
+	void ShaderProgram::AddUniform(const std::string& varName)
+	{
+		m_Uniforms[varName] = glGetUniformLocation(m_ProgramId, varName.c_str());
+	}
+	void ShaderProgram::SetUniformVec2(const std::string& varName, const Vector2& value)
+	{
+		glUniform2f(m_Uniforms[varName], value.x, value.y);
+	}
+	void ShaderProgram::SetUniformVec4(const std::string& varName, const Vector4& value)
+	{
+		glUniform4f(m_Uniforms[varName], value.r, value.g, value.b, value.a);
+	}
+
+
 } }

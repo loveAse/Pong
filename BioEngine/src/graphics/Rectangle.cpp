@@ -38,11 +38,13 @@ namespace bioengine { namespace graphics {
 	void Rectangle::SetPosition(float x, float y)
 	{
 		m_Position = Vector2(x, y);
+		m_Program->SetUniformVec2("uPosition", m_Position);
 	}
 
 	void Rectangle::SetPosition(const Vector2 position)
 	{
 		m_Position = position;
+		m_Program->SetUniformVec2("uPosition", m_Position);
 	}
 
 	void Rectangle::SetDimension(float x, float y)
@@ -58,11 +60,13 @@ namespace bioengine { namespace graphics {
 	void Rectangle::SetColor(float r, float g, float b, float a)
 	{
 		m_Color = Vector4(r, g, b, a);
+		m_Program->SetUniformVec4("uColor", m_Color);
 	}
 
 	void Rectangle::SetColor(const Vector4& color)
 	{
 		m_Color = color;
+		m_Program->SetUniformVec4("uColor", m_Color);
 	}
 
 	void Rectangle::Init()
@@ -72,6 +76,11 @@ namespace bioengine { namespace graphics {
 		m_Program->AttachShader("Resources/basic.frag", GL_FRAGMENT_SHADER);
 		m_Program->Link();
 		m_Program->Use();
+
+		m_Program->AddUniform("uPosition");
+		m_Program->AddUniform("uColor");
+		m_Program->SetUniformVec2("uPosition", m_Position);
+		m_Program->SetUniformVec4("uColor", m_Color);
 
 		m_Vertices = {
 			Vertex2D(-m_Dimension.x / 2.0f, -m_Dimension.y / 2.0f),
