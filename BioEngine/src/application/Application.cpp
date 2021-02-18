@@ -4,7 +4,7 @@ namespace bioengine {
 
 	Application::Application() 
 	{ 
-		m_Window = new graphics::Window("BioEngine App", 650, 650);
+		m_Window = new Window("BioEngine App", 650, 650);
 	}
 	Application::~Application() 
 	{ 

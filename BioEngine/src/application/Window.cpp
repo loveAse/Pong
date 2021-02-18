@@ -1,6 +1,6 @@
-#include "BioEngine/graphics/Window.h"
+#include "BioEngine/application/Window.h"
 
-namespace bioengine { namespace graphics {
+namespace bioengine {
 
 	Window::Window(const char* title, int width, int height)
 	{
@@ -55,4 +55,4 @@ namespace bioengine { namespace graphics {
 		return glfwWindowShouldClose(m_Window) == 0;
 	}
 
-} }
+}

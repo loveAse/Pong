@@ -171,6 +171,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\BioEngine\application\EventSystem.h" />
     <ClInclude Include="include\BioEngine.h" />
     <ClInclude Include="include\BioEngine\API.h" />
     <ClInclude Include="include\BioEngine\application\Application.h" />
@@ -178,19 +179,20 @@
     <ClInclude Include="include\BioEngine\graphics\Rectangle.h" />
     <ClInclude Include="include\BioEngine\graphics\ShaderProgram.h" />
     <ClInclude Include="include\BioEngine\graphics\VertexTypes.h" />
-    <ClInclude Include="include\BioEngine\graphics\Window.h" />
+    <ClInclude Include="include\BioEngine\application\Window.h" />
     <ClInclude Include="include\BioEngine\math\Matrix3.h" />
     <ClInclude Include="include\BioEngine\math\Vector2.h" />
     <ClInclude Include="include\BioEngine\math\Vector4.h" />
     <ClInclude Include="include\BioEngine\utils\FileUtils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\application\EventSystem.cpp" />
     <ClCompile Include="src\application\Application.cpp" />
     <ClCompile Include="src\graphics\Buffer.cpp" />
     <ClCompile Include="src\graphics\Rectangle.cpp" />
     <ClCompile Include="src\graphics\ShaderProgram.cpp" />
     <ClCompile Include="src\graphics\VertexTypes.cpp" />
-    <ClCompile Include="src\graphics\Window.cpp" />
+    <ClCompile Include="src\application\Window.cpp" />
     <ClCompile Include="src\math\Matrix3.cpp" />
     <ClCompile Include="src\math\Vector2.cpp" />
     <ClCompile Include="src\math\Vector4.cpp" />

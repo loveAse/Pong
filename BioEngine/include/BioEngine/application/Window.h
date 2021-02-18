@@ -4,7 +4,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-namespace bioengine { namespace graphics {
+namespace bioengine {
 
 	class BE_API Window
 	{
@@ -26,6 +26,11 @@ namespace bioengine { namespace graphics {
 
 	private:
 		bool Init();
+
+	protected:
+		inline GLFWwindow* GetGLFWwindow() { return m_Window; }
+
+	friend class Application;
 	};
 
-} }
+}

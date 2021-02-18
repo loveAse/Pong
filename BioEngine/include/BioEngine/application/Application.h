@@ -1,7 +1,7 @@
 #pragma once
 
 #include "BioEngine/API.h"
-#include "BioEngine/graphics/Window.h"
+#include "Window.h"
 
 namespace bioengine {
 
@@ -15,7 +15,12 @@ namespace bioengine {
 		virtual void Render();
 
 	private:
-		graphics::Window* m_Window;
+		Window* m_Window;
+
+	protected:
+		inline GLFWwindow* GetGLFWwindow() { return m_Window->GetGLFWwindow(); }
+
+	friend class EventSystem;
 	};
 
 }
