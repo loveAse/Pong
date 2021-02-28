@@ -2,6 +2,7 @@
 
 #include "BioEngine/API.h"
 #include "Window.h"
+#include "BioEngine/Time.h"
 
 namespace bioengine {
 

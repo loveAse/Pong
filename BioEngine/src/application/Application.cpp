@@ -15,6 +15,8 @@ namespace bioengine {
 	{
 		while (m_Window->IsOpen())
 		{
+			Time::Update();
+
 			m_Window->Clear();
 			Render();
 			m_Window->Update();

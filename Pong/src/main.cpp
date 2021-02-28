@@ -27,6 +27,8 @@ public:
 
 		m_Player1->Render();
 		m_Player2->Render();
+
+		std::cout << "DT: " << Time::GetDeltaTime() << std::endl;
 	}
 
 	void OnKeyDown(int keyCode) override

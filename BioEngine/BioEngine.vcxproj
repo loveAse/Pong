@@ -183,6 +183,7 @@
     <ClInclude Include="include\BioEngine\math\Matrix3.h" />
     <ClInclude Include="include\BioEngine\math\Vector2.h" />
     <ClInclude Include="include\BioEngine\math\Vector4.h" />
+    <ClInclude Include="include\BioEngine\Time.h" />
     <ClInclude Include="include\BioEngine\utils\FileUtils.h" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +197,7 @@
     <ClCompile Include="src\math\Matrix3.cpp" />
     <ClCompile Include="src\math\Vector2.cpp" />
     <ClCompile Include="src\math\Vector4.cpp" />
+    <ClCompile Include="src\Time.cpp" />
     <ClCompile Include="src\utils\FileUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
