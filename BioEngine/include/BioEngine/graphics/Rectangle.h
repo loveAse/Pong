@@ -32,7 +32,7 @@ namespace bioengine { namespace graphics {
 		void SetColor(float r, float g, float b, float a);
 		void SetColor(const Vector4& color);
 
-	private:
+	protected:
 		void Init();
 
 	private:

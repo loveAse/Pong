@@ -1,5 +1,6 @@
 #include <BioEngine.h>
 #include <iostream>
+#include "Player.h"
 
 using namespace bioengine;
 
@@ -8,19 +9,24 @@ class PongGame : public Application, public EventSystem
 public:
 	PongGame()
 	{
-		m_Rectangle = new graphics::Rectangle(0.5f, 0.3f, 0.5f, 1.0f);
-		m_Rectangle->SetColor(0.4f, 0.6f, 1.0f, 1.0f);
+		m_Player1 = new Player(0);
+		m_Player2 = new Player(1);
 
 		SetEventListener(this);
 	}
 	~PongGame()
 	{
-		delete m_Rectangle;
+		delete m_Player1;
+		delete m_Player2;
 	}
 
 	void Render() override
 	{
-		m_Rectangle->Render();
+		m_Player1->Update();
+		m_Player2->Update();
+
+		m_Player1->Render();
+		m_Player2->Render();
 	}
 
 	void OnKeyDown(int keyCode) override
@@ -33,7 +39,8 @@ public:
 	}
 
 private:
-	graphics::Rectangle* m_Rectangle;
+	Player* m_Player1; 
+	Player* m_Player2;
 };
 
 int main()
