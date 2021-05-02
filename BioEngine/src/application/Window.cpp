@@ -32,6 +32,7 @@ namespace bioengine {
 		}
 
 		glfwMakeContextCurrent(m_Window);
+		glfwSwapInterval(1);
 
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{

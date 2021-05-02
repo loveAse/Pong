@@ -3,7 +3,7 @@
 Player::Player(bool index)
 {
 	m_Index = index;
-	m_Speed = 0.05f;
+	m_Speed = 0.8f;
 	m_Direction = 0;
 
 	SetPosition(m_Index ? -0.85f : 0.85f, 0.0f);
@@ -16,5 +16,6 @@ Player::Player(bool index)
 void Player::Update()
 {
 	bioengine::Vector2 newPosition = GetPosition();
-	newPosition.y += m_Speed * m_Direction;
+	newPosition.y += m_Speed * m_Direction * static_cast<float>(bioengine::Time::deltaTime);
+	SetPosition(newPosition);
 }

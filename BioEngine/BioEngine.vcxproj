@@ -175,6 +175,7 @@
     <ClInclude Include="include\BioEngine.h" />
     <ClInclude Include="include\BioEngine\API.h" />
     <ClInclude Include="include\BioEngine\application\Application.h" />
+    <ClInclude Include="include\BioEngine\Time.h" />
     <ClInclude Include="include\BioEngine\graphics\Buffer.h" />
     <ClInclude Include="include\BioEngine\graphics\Rectangle.h" />
     <ClInclude Include="include\BioEngine\graphics\ShaderProgram.h" />
@@ -183,7 +184,6 @@
     <ClInclude Include="include\BioEngine\math\Matrix3.h" />
     <ClInclude Include="include\BioEngine\math\Vector2.h" />
     <ClInclude Include="include\BioEngine\math\Vector4.h" />
-    <ClInclude Include="include\BioEngine\Time.h" />
     <ClInclude Include="include\BioEngine\utils\FileUtils.h" />
   </ItemGroup>
   <ItemGroup>

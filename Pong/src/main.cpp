@@ -27,17 +27,30 @@ public:
 
 		m_Player1->Render();
 		m_Player2->Render();
-
-		std::cout << "DT: " << Time::GetDeltaTime() << std::endl;
 	}
 
 	void OnKeyDown(int keyCode) override
 	{
-		std::cout << "Key Down: " << keyCode << std::endl;
+		switch (keyCode)
+		{
+		case GLFW_KEY_UP:
+			m_Player1->SetDirection(1);
+			break;
+		case GLFW_KEY_DOWN:
+			m_Player1->SetDirection(-1);
+			break;
+
+		case GLFW_KEY_W:
+			m_Player2->SetDirection(1);
+			break;
+		case GLFW_KEY_S:
+			m_Player2->SetDirection(-1);
+			break;
+		}
 	}
 	void OnKeyUp(int keyCode) override
 	{
-		std::cout << "Key Up: " << keyCode << std::endl;
+		
 	}
 
 private:

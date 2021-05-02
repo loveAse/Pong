@@ -7,10 +7,10 @@ namespace bioengine {
 	class BE_API Time
 	{
 	public:
-		static inline double GetDeltaTime() { return currentFrame - lastFrame; }
+		static double deltaTime;
 
 	protected:
-		static void Update();
+		static void UpdateTime();
 
 	private:
 		static double lastFrame;
