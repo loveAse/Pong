@@ -12,8 +12,8 @@ public:
 	{
 		m_Player1 = new Player(0);
 		m_Player2 = new Player(1);
-		m_Ball = new Ball();
-		m_Ball->SetDirection(45);
+		m_Ball = new Ball(m_Player1, m_Player2);
+		m_Ball->SetDirection(150.0f);
 
 		SetEventListener(this);
 	}
